@@ -121,17 +121,44 @@ window.PORTFOLIO = {
       time: "Oct 2023 – Aug 2025",
       summary: "I led the brakes department for Team Oorja's go-kart, which finished 6th nationally at the Indian Karting Race 2024.",
       description: [
-        "I designed and optimised the kart's braking system, checking load cases in ANSYS, and helped fabricate it: cutting, welding and surface finishing.",
-        "At the Indian Karting Race at Buddh International Circuit (2024) the team finished 6th nationally. I made last-minute technical fixes that kept the kart qualified for the advanced rounds. We also competed in the Go-Kart Design Challenge at Kari Motor Speedway (2025)."
+        "I designed the kart's hydraulic disc-brake system, from the pedal ratio and master-cylinder sizing through to structural and thermal analysis in ANSYS, and helped fabricate it: cutting, welding and surface finishing.",
+        "We chose disc brakes over drums because they are more compact, cool better through the drilled rotor, resist fade under repeated hard stops and are easier to service. The design goal was the shortest stopping distance without locking the wheels.",
+        "The pedal went through several iterations. The design target was a 2000 N driver load, so each version was checked against that case until the final 7:1 pedal held it with margin.",
+        "At the Indian Karting Race at Buddh International Circuit (2024) the team finished 6th nationally. I made last-minute technical fixes that kept the kart qualified for the advanced rounds. We also competed in the 12th Go-Kart Design Challenge at Kari Motor Speedway (2025)."
+      ],
+      revisions: [
+        { rev: "A", change: "First brake calculations at a 4:1 pedal ratio, comparing 12 mm and 14 mm master-cylinder bores.", result: "12 mm bore chosen for higher line pressure; pedal ratio raised for the next iteration." },
+        { rev: "B", change: "Early pedal concept modelled and simulated in SolidWorks.", result: "Minimum factor of safety 1.01: too little margin." },
+        { rev: "C", change: "Final 7:1 pedal with a lightened, cranked profile, checked in ANSYS at 2000 N.", result: "Minimum factor of safety 1.18, 2.1 mm peak deflection.", current: true }
       ],
       specs: [
         "Pedal ratio: 7:1",
         "Pedal design load: 2000 N",
-        "Stopping distance: 4.5 m from 50 km/h"
+        "Master cylinder: 12 mm bore",
+        "Caliper: 30 mm bore, fixed, twin-piston",
+        "Disc: 190 mm diameter, drilled",
+        "Brake line: 3 mm, DOT 3 fluid",
+        "Calculated line pressure: about 11.8 MPa",
+        "Calculated braking torque: about 570 N·m",
+        "Stopping distance: 4.5 m from 50 km/h (3.3 m calculated)"
       ],
-      tags: ["SolidWorks", "ANSYS Structural", "Fabrication", "Welding"],
-      learning: ["Designing to a load case", "Working to competition deadlines", "Leading a department"],
-      media: []
+      tags: ["SolidWorks", "ANSYS Structural", "ANSYS Thermal", "Hydraulic brakes", "Fabrication", "Welding"],
+      learning: ["Designing to a load case", "Iterating on factor of safety", "Thermal behaviour of brake discs", "Leading a department"],
+      media: [
+        { type: "image", src: "assets/images/gokart-brakes/1.jpg", caption: "Team Oorja's kart #17, Indian Karting Race 2024." },
+        { type: "video", src: "assets/videos/gokart-track.mp4", poster: "assets/images/gokart-brakes/poster-track.jpg", caption: "Track testing." },
+        { type: "image", src: "assets/images/gokart-brakes/2.jpg", caption: "Final pedal, ANSYS: factor of safety at 2000 N (minimum 1.18)." },
+        { type: "image", src: "assets/images/gokart-brakes/3.jpg", caption: "Final pedal, ANSYS: von Mises stress at 2000 N." },
+        { type: "image", src: "assets/images/gokart-brakes/4.jpg", caption: "Final pedal, ANSYS: total deformation at 2000 N (2.1 mm peak)." },
+        { type: "image", src: "assets/images/gokart-brakes/5.jpg", caption: "Brake disc, ANSYS steady-state thermal under two load cases (peak 169 °C and 233 °C)." },
+        { type: "image", src: "assets/images/gokart-brakes/6.jpg", caption: "Rev B: early pedal concept, SolidWorks factor-of-safety plot (minimum 1.01)." },
+        { type: "video", src: "assets/videos/gokart-pedal.mp4", poster: "assets/images/gokart-brakes/poster-pedal.jpg", caption: "Brake pedal and master cylinder fitted to the kart." },
+        { type: "video", src: "assets/videos/gokart-fabrication.mp4", poster: "assets/images/gokart-brakes/poster-fabrication.jpg", caption: "Fabrication in the team workshop." },
+        { type: "image", src: "assets/images/gokart-brakes/7.jpg", caption: "In the bare chassis during the build, June 2024." },
+        { type: "image", src: "assets/images/gokart-brakes/8.jpg", caption: "Team Oorja at the Formula Imperial & Indian Karting Race 2024." },
+        { type: "image", src: "assets/images/gokart-brakes/9.jpg", caption: "Team Oorja at the 12th Go-Kart Design Challenge." },
+        { type: "image", src: "assets/images/gokart-brakes/10.jpg", caption: "E-177, Team Oorja's electric kart." }
+      ]
     },
     {
       id: "garud-pak",

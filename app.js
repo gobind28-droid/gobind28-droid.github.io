@@ -145,13 +145,13 @@
 
   function mediaItem(m, p) {
     if (m.type === 'image') return '<img src="' + esc(m.src) + '" alt="' + esc(m.caption || p.title) + '">';
-    if (m.type === 'video') return '<video src="' + esc(m.src) + '" controls playsinline preload="metadata"' + (m.poster ? ' poster="' + esc(m.poster) + '"' : '') + '></video>';
+    if (m.type === 'video') return '<video src="' + esc(m.src) + '" controls muted playsinline preload="metadata"' + (m.poster ? ' poster="' + esc(m.poster) + '"' : '') + '></video>';
     if (m.type === 'youtube') return '<iframe src="https://www.youtube-nocookie.com/embed/' + esc(m.id) + '" title="' + esc(m.caption || p.title) + '" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe>';
     if (m.type === 'model') { ensureModelViewer(); return '<model-viewer src="' + esc(m.src) + '" camera-controls auto-rotate shadow-intensity="1" alt="3D model of ' + esc(p.title) + '"></model-viewer>'; }
     return '';
   }
   function thumb(m, i) {
-    var inner = m.type === 'image' ? '<img src="' + esc(m.src) + '" alt="">' : (m.type === 'youtube' ? '<img src="https://i.ytimg.com/vi/' + esc(m.id) + '/mqdefault.jpg" alt="">' : (m.type === 'model' ? '3D' : 'VIDEO'));
+    var inner = m.type === 'image' ? '<img src="' + esc(m.src) + '" alt="">' : (m.type === 'youtube' ? '<img src="https://i.ytimg.com/vi/' + esc(m.id) + '/mqdefault.jpg" alt="">' : (m.type === 'model' ? '3D' : (m.poster ? '<img src="' + esc(m.poster) + '" alt=""><span class="play">▶</span>' : 'VIDEO')));
     return '<button class="thumb" type="button" data-i="' + i + '" aria-label="Show item ' + (i + 1) + '">' + inner + '</button>';
   }
 
