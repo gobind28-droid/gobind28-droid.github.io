@@ -32,7 +32,7 @@ window.PORTFOLIO = {
     tagline: "I design robots, from the mechanism up to the control loop.",
     about: [
       "I'm a mechatronics engineering student at Thapar Institute of Engineering & Technology (class of 2027). I design mechanisms in CAD, build them, and tune the controllers that run them.",
-      "My main project is Orient, a ball-balancing parallel platform I've rebuilt three times. Each revision went after free play in the linkages, and the third has almost none left. I'm now designing a hexapod and a bipedal robot.",
+      "My main project is Orient, a six-servo Stewart platform that balances a ball, which I've rebuilt three times. Each revision went after free play in the linkages, and the third has almost none left. I'm now designing a hexapod and a bipedal robot.",
       "I lead the mechanical team at Team G-Force and previously led brakes for Team Oorja's go-kart, which finished 6th nationally. I'm looking for master's programmes and roles in robotics and mechanical design."
     ],
     highlights: [
@@ -50,31 +50,43 @@ window.PORTFOLIO = {
       id: "orient",
       dwg: "GS-01",
       title: "Orient",
-      subtitle: "Ball-balancing parallel platform",
+      subtitle: "Six-servo Stewart platform ball balancer",
       category: "Robotics & Controls",
-      status: "Ongoing",
-      time: "Jan 2026 – present",
+      status: "Completed",
+      time: "2026",
       featured: true,
-      summary: "A servo-driven parallel platform that tilts to keep a ball centred, using an overhead camera for feedback and a PID loop for control.",
+      summary: "A six-servo Stewart platform that tilts to keep a ball centred, using an overhead camera for feedback and a PID loop for control.",
       description: [
-        "Orient is a Stewart-style parallel platform. A camera on the overhead arm tracks the ball, and a PID controller drives the servos to tilt the plate and bring the ball back to the setpoint.",
-        "Most of the work has gone into the mechanism. Any free play in the linkages shows up as the ball wandering around the setpoint, because the controller commands an angle the plate doesn't actually reach. Each revision went after that slack."
+        "Orient is a 6-DOF Stewart platform. Six hobby servos, arranged in three pairs around the base, drive rod-end linkages up to a clear acrylic plate. A camera on the overhead arm tracks the ball, and a PID controller works out the plate tilt needed to bring it back to the setpoint and drives the servos to get there.",
+        "I designed the base, servo mounts, linkages and camera arm in SolidWorks and 3D printed them. Most of the work went into the mechanism. Any free play in the linkages shows up as the ball wandering around the setpoint, because the controller commands an angle the plate doesn't actually reach. Each revision went after that slack.",
+        "The photos and videos here are of Rev B, the second iteration."
       ],
       revisions: [
         { rev: "A", change: "First build: proof of concept for the platform and vision loop.", result: "Working balance; noticeable linkage slack." },
-        { rev: "B", change: "Redesigned and scaled up the structure; reworked the linkage joints.", result: "About 85% less free play; stiffer frame." },
+        { rev: "B", change: "Redesigned and scaled up the structure; reworked the linkage joints and added the overhead camera arm.", result: "About 85% less free play; stiffer frame. Shown in the photos and videos." },
         { rev: "C", change: "Third iteration of the joint and linkage design.", result: "Almost no free play left in the linkages.", current: true }
       ],
       specs: [
-        "Control: PID on vision-based ball position",
+        "Configuration: 6-DOF Stewart platform",
+        "Actuation: 6 hobby servos in 3 pairs, rod-end linkages",
+        "Feedback: overhead camera, vision-based ball tracking",
+        "Control: PID on ball position",
         "Response time: under 0.7 s (MATLAB simulation)",
-        "Feedback: overhead camera",
-        "Actuation: hobby servos with rod-end linkages"
+        "Platform: clear acrylic plate on 3D-printed base"
       ],
       tags: ["SolidWorks", "MATLAB", "Simulink", "PID", "Computer vision", "3D printing"],
-      learning: ["Backlash and its effect on control", "Parallel-mechanism kinematics", "PID tuning"],
+      learning: ["Backlash and its effect on control", "Parallel-mechanism kinematics", "PID tuning", "Vision-based feedback"],
       media: [
-        { type: "image", src: "assets/images/orient/1.jpg", caption: "Orient with the overhead camera arm." }
+        { type: "image", src: "assets/images/orient/1.jpg", caption: "Orient Rev B with the overhead camera arm." },
+        { type: "video", src: "assets/videos/orient-balance.mp4", poster: "assets/images/orient/poster-balance.jpg", caption: "Balancing: the platform brings the ball back to centre after it is disturbed." },
+        { type: "video", src: "assets/videos/orient-tracking.mp4", poster: "assets/images/orient/poster-tracking.jpg", caption: "Vision loop: the camera feed on screen tracks the ball while the platform responds." },
+        { type: "video", src: "assets/videos/orient-motion.mp4", poster: "assets/images/orient/poster-motion.jpg", caption: "Motion test of the six-servo platform." },
+        { type: "image", src: "assets/images/orient/4.jpg", caption: "Base assembly in SolidWorks: three servo pairs around the base." },
+        { type: "image", src: "assets/images/orient/5.jpg", caption: "Servo pairs and linkage arms, isometric view." },
+        { type: "image", src: "assets/images/orient/6.jpg", caption: "Full assembly with the camera arm." },
+        { type: "image", src: "assets/images/orient/2.jpg", caption: "On the bench during assembly, with all six servos fitted." },
+        { type: "image", src: "assets/images/orient/3.jpg", caption: "Side view of the linkages and acrylic plate." },
+        { type: "image", src: "assets/images/orient/7.jpg", caption: "Receiving certificates at TIET's Experiential Learning Centre." }
       ]
     },
     {
@@ -145,7 +157,7 @@ window.PORTFOLIO = {
       tags: ["SolidWorks", "ANSYS Structural", "ANSYS Thermal", "Hydraulic brakes", "Fabrication", "Welding"],
       learning: ["Designing to a load case", "Iterating on factor of safety", "Thermal behaviour of brake discs", "Leading a department"],
       media: [
-        { type: "image", src: "assets/images/gokart-brakes/1.jpg", caption: "Team Oorja's kart #17, Indian Karting Race 2024." },
+        { type: "image", src: "assets/images/gokart-brakes/1.jpg", caption: "E-177, Team Oorja's electric kart." },
         { type: "video", src: "assets/videos/gokart-track.mp4", poster: "assets/images/gokart-brakes/poster-track.jpg", caption: "Track testing." },
         { type: "image", src: "assets/images/gokart-brakes/2.jpg", caption: "Final pedal, ANSYS: factor of safety at 2000 N (minimum 1.18)." },
         { type: "image", src: "assets/images/gokart-brakes/3.jpg", caption: "Final pedal, ANSYS: von Mises stress at 2000 N." },
@@ -156,8 +168,7 @@ window.PORTFOLIO = {
         { type: "video", src: "assets/videos/gokart-fabrication.mp4", poster: "assets/images/gokart-brakes/poster-fabrication.jpg", caption: "Fabrication in the team workshop." },
         { type: "image", src: "assets/images/gokart-brakes/7.jpg", caption: "In the bare chassis during the build, June 2024." },
         { type: "image", src: "assets/images/gokart-brakes/8.jpg", caption: "Team Oorja at the Formula Imperial & Indian Karting Race 2024." },
-        { type: "image", src: "assets/images/gokart-brakes/9.jpg", caption: "Team Oorja at the 12th Go-Kart Design Challenge." },
-        { type: "image", src: "assets/images/gokart-brakes/10.jpg", caption: "E-177, Team Oorja's electric kart." }
+        { type: "image", src: "assets/images/gokart-brakes/9.jpg", caption: "Team Oorja at the 12th Go-Kart Design Challenge." }
       ]
     },
     {
