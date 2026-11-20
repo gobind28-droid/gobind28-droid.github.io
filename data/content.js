@@ -101,22 +101,28 @@ window.PORTFOLIO = {
       summary: "A scaled-up bipedal walking robot, based on the open-source Open Duck Mini. We built the original first to learn from it.",
       description: [
         "We started by building the <a href=\"https://github.com/apirrone/Open_Duck_Mini\" target=\"_blank\" rel=\"noopener\">Open Duck Mini</a>, an open-source bipedal robot (the black one in the photos). It was our reference: building and running it showed us where its problems were before we committed to a design of our own.",
-        "We are now designing and building a scaled-up version (the blue one). I'm working on the legs, hips and body in SolidWorks, and the parts are 3D printed. The legs are printed and fitted with servos, and the full assembly is coming together."
+        "We are now designing and building a scaled-up version (the blue one). We scaled the design up 1.3×, the largest size that keeps the joint torques within the servos' 30 kg·cm limit. I'm working on the legs, hips and body in SolidWorks, and the parts are 3D printed. The legs are printed and fitted with servos, and the full assembly is coming together."
       ],
       specs: [
         "Reference design: Open Duck Mini (open source)",
-        "Our version: scaled up, redesigned in SolidWorks",
+        "Our version: scaled up 1.3×, redesigned in SolidWorks",
+        "Scale limit: servo torque, 30 kg·cm",
         "Actuators: Feetech STS3215 serial bus servos",
         "Build: 3D-printed structure"
       ],
       tags: ["SolidWorks", "3D printing", "Kinematics", "Balance control"],
-      learning: ["Learning from an open-source design", "Scaling a mechanism up"],
+      learning: ["Learning from an open-source design", "Scaling a mechanism to an actuator torque limit"],
       media: [
         { type: "image", src: "assets/images/biped/1.jpg", caption: "Our scaled-up version (blue, left) next to the Open Duck Mini we built as a reference (black, right)." },
+        { type: "video", src: "assets/videos/biped-walk-1.mp4", poster: "assets/images/biped/poster-walk-1.jpg", caption: "Open Duck Mini reference build: walking test." },
+        { type: "video", src: "assets/videos/biped-walk-2.mp4", poster: "assets/images/biped/poster-walk-2.jpg", caption: "Open Duck Mini: walking and turning on the floor." },
+        { type: "video", src: "assets/videos/biped-walk-3.mp4", poster: "assets/images/biped/poster-walk-3.jpg", caption: "Open Duck Mini: longer walking test." },
         { type: "image", src: "assets/images/biped/2.jpg", caption: "Scaled-up design in SolidWorks: full assembly with body shell and head." },
         { type: "image", src: "assets/images/biped/3.jpg", caption: "Legs, hips and neck without the body shell." },
         { type: "image", src: "assets/images/biped/4.jpg", caption: "Leg and hip design." },
         { type: "image", src: "assets/images/biped/5.jpg", caption: "Scaled-up legs, printed and fitted with servos." },
+        { type: "image", src: "assets/images/biped/9.jpg", caption: "Working on the Open Duck Mini legs." },
+        { type: "video", src: "assets/videos/biped-leg-test.mp4", poster: "assets/images/biped/poster-leg-test.jpg", caption: "Testing the leg servos on the Open Duck Mini." },
         { type: "image", src: "assets/images/biped/6.jpg", caption: "Assembling the legs of the Open Duck Mini reference build." },
         { type: "image", src: "assets/images/biped/7.jpg", caption: "The Open Duck Mini legs and hips, assembled." },
         { type: "image", src: "assets/images/biped/8.jpg", caption: "With the team at TIET's Experiential Learning Centre, both bipeds in front." }
