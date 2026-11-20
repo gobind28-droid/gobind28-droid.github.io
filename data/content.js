@@ -32,7 +32,7 @@ window.PORTFOLIO = {
     tagline: "I design robots, from the mechanism up to the control loop.",
     about: [
       "I'm a mechatronics engineering student at Thapar Institute of Engineering & Technology (class of 2027). I design mechanisms in CAD, build them, and tune the controllers that run them.",
-      "My main project is Orient, a six-servo Stewart platform that balances a ball, which I've rebuilt three times. Each revision went after free play in the linkages, and the third has almost none left. I'm now designing a hexapod and a bipedal robot.",
+      "My main project is Orient, a 3-DOF Stewart-style platform that balances a ball, which I've rebuilt three times. Each revision went after free play in the linkages, and the third has almost none left. I'm now designing a hexapod and a bipedal robot.",
       "I lead the mechanical team at Team G-Force and previously led brakes for Team Oorja's go-kart, which finished 6th nationally. I'm looking for master's programmes and roles in robotics and mechanical design."
     ],
     highlights: [
@@ -50,14 +50,14 @@ window.PORTFOLIO = {
       id: "orient",
       dwg: "GS-01",
       title: "Orient",
-      subtitle: "Six-servo Stewart platform ball balancer",
+      subtitle: "3-DOF Stewart-style ball-balancing platform",
       category: "Robotics & Controls",
       status: "Completed",
       time: "2026",
       featured: true,
-      summary: "A six-servo Stewart platform that tilts to keep a ball centred, using an overhead camera for feedback and a PID loop for control.",
+      summary: "A 3-DOF Stewart-style platform that tilts to keep a ball centred, using an overhead camera for feedback and a PID loop for control.",
       description: [
-        "Orient is a 6-DOF Stewart platform. Six hobby servos, arranged in three pairs around the base, drive rod-end linkages up to a clear acrylic plate. A camera on the overhead arm tracks the ball, and a PID controller works out the plate tilt needed to bring it back to the setpoint and drives the servos to get there.",
+        "Orient is a 3-DOF Stewart-style parallel platform. Six hobby servos, arranged in three pairs around the base, drive rod-end linkages up to a clear acrylic plate. A camera on the overhead arm tracks the ball, and a PID controller works out the plate tilt needed to bring it back to the setpoint and drives the servos to get there.",
         "I designed the base, servo mounts, linkages and camera arm in SolidWorks and 3D printed them. Most of the work went into the mechanism. Any free play in the linkages shows up as the ball wandering around the setpoint, because the controller commands an angle the plate doesn't actually reach. Each revision went after that slack.",
         "The photos and videos here are of Rev B, the second iteration."
       ],
@@ -67,7 +67,7 @@ window.PORTFOLIO = {
         { rev: "C", change: "Third iteration of the joint and linkage design.", result: "Almost no free play left in the linkages.", current: true }
       ],
       specs: [
-        "Configuration: 6-DOF Stewart platform",
+        "Configuration: 3-DOF parallel platform",
         "Actuation: 6 hobby servos in 3 pairs, rod-end linkages",
         "Feedback: overhead camera, vision-based ball tracking",
         "Control: PID on ball position",
@@ -80,7 +80,8 @@ window.PORTFOLIO = {
         { type: "image", src: "assets/images/orient/1.jpg", caption: "Orient Rev B with the overhead camera arm." },
         { type: "video", src: "assets/videos/orient-balance.mp4", poster: "assets/images/orient/poster-balance.jpg", caption: "Balancing: the platform brings the ball back to centre after it is disturbed." },
         { type: "video", src: "assets/videos/orient-tracking.mp4", poster: "assets/images/orient/poster-tracking.jpg", caption: "Vision loop: the camera feed on screen tracks the ball while the platform responds." },
-        { type: "video", src: "assets/videos/orient-motion.mp4", poster: "assets/images/orient/poster-motion.jpg", caption: "Motion test of the six-servo platform." },
+        { type: "video", src: "assets/videos/orient-motion.mp4", poster: "assets/images/orient/poster-motion.jpg", caption: "Motion test of the platform." },
+        { type: "video", src: "assets/videos/orient-calibration.mp4", poster: "assets/images/orient/poster-calibration.jpg", caption: "Working on Orient and calibrating it." },
         { type: "image", src: "assets/images/orient/4.jpg", caption: "Base assembly in SolidWorks: three servo pairs around the base." },
         { type: "image", src: "assets/images/orient/5.jpg", caption: "Servo pairs and linkage arms, isometric view." },
         { type: "image", src: "assets/images/orient/6.jpg", caption: "Full assembly with the camera arm." },
