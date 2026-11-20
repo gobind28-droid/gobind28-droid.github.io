@@ -32,7 +32,7 @@ window.PORTFOLIO = {
     tagline: "I design robots, from the mechanism up to the control loop.",
     about: [
       "I'm a mechatronics engineering student at Thapar Institute of Engineering & Technology (class of 2027). I design mechanisms in CAD, build them, and tune the controllers that run them.",
-      "My main project is Orient, a 3-DOF Stewart-style platform that balances a ball, which I've rebuilt three times. Each revision went after free play in the linkages, and the third has almost none left. I'm now designing a hexapod and a bipedal robot.",
+      "My main project is Orient, a 3-DOF Stewart-style platform that balances a ball, which I've rebuilt three times. Each revision went after free play in the linkages, and the third has almost none left. I'm now building a scaled-up bipedal robot, based on the open-source Open Duck Mini.",
       "I lead the mechanical team at Team G-Force and previously led brakes for Team Oorja's go-kart, which finished 6th nationally. I'm looking for master's programmes and roles in robotics and mechanical design."
     ],
     highlights: [
@@ -91,42 +91,40 @@ window.PORTFOLIO = {
       ]
     },
     {
-      id: "hexapod",
-      dwg: "GS-02",
-      title: "Hexapod",
-      subtitle: "Six-legged walking robot",
-      category: "Legged Robots",
-      status: "In design",
-      time: "2026 – present",
-      summary: "A six-legged walking robot, currently in the design phase.",
-      description: [
-        "I'm designing the leg mechanism and body in CAD, and planning a tripod gait so the robot always has three feet on the ground and stays statically stable while it walks."
-      ],
-      specs: ["Legs: 6", "Gait: tripod (planned)"],
-      tags: ["SolidWorks", "Kinematics", "Gait planning"],
-      learning: [],
-      media: []
-    },
-    {
       id: "biped",
-      dwg: "GS-03",
+      dwg: "GS-02",
       title: "Bipedal robot",
-      subtitle: "Two-legged walking robot",
+      subtitle: "A scaled-up Open Duck Mini",
       category: "Legged Robots",
-      status: "In design",
-      time: "2026 – present",
-      summary: "A two-legged walking robot, currently in the design phase.",
+      status: "In progress",
+      time: "Oct 2026 – present",
+      summary: "A scaled-up bipedal walking robot, based on the open-source Open Duck Mini. We built the original first to learn from it.",
       description: [
-        "I'm designing the leg kinematics and actuator layout in CAD. The project builds on Orient's balance control, moving from balancing a ball on a platform to balancing the robot itself."
+        "We started by building the <a href=\"https://github.com/apirrone/Open_Duck_Mini\" target=\"_blank\" rel=\"noopener\">Open Duck Mini</a>, an open-source bipedal robot (the black one in the photos). It was our reference: building and running it showed us where its problems were before we committed to a design of our own.",
+        "We are now designing and building a scaled-up version (the blue one). I'm working on the legs, hips and body in SolidWorks, and the parts are 3D printed. The legs are printed and fitted with servos, and the full assembly is coming together."
       ],
-      specs: ["Legs: 2"],
-      tags: ["SolidWorks", "Kinematics", "Balance control"],
-      learning: [],
-      media: []
+      specs: [
+        "Reference design: Open Duck Mini (open source)",
+        "Our version: scaled up, redesigned in SolidWorks",
+        "Actuators: Feetech STS3215 serial bus servos",
+        "Build: 3D-printed structure"
+      ],
+      tags: ["SolidWorks", "3D printing", "Kinematics", "Balance control"],
+      learning: ["Learning from an open-source design", "Scaling a mechanism up"],
+      media: [
+        { type: "image", src: "assets/images/biped/1.jpg", caption: "Our scaled-up version (blue, left) next to the Open Duck Mini we built as a reference (black, right)." },
+        { type: "image", src: "assets/images/biped/2.jpg", caption: "Scaled-up design in SolidWorks: full assembly with body shell and head." },
+        { type: "image", src: "assets/images/biped/3.jpg", caption: "Legs, hips and neck without the body shell." },
+        { type: "image", src: "assets/images/biped/4.jpg", caption: "Leg and hip design." },
+        { type: "image", src: "assets/images/biped/5.jpg", caption: "Scaled-up legs, printed and fitted with servos." },
+        { type: "image", src: "assets/images/biped/6.jpg", caption: "Assembling the legs of the Open Duck Mini reference build." },
+        { type: "image", src: "assets/images/biped/7.jpg", caption: "The Open Duck Mini legs and hips, assembled." },
+        { type: "image", src: "assets/images/biped/8.jpg", caption: "With the team at TIET's Experiential Learning Centre, both bipeds in front." }
+      ]
     },
     {
       id: "gokart-brakes",
-      dwg: "GS-04",
+      dwg: "GS-03",
       title: "Go-kart braking system",
       subtitle: "Team Oorja, TIET",
       category: "Vehicle Design",
@@ -174,7 +172,7 @@ window.PORTFOLIO = {
     },
     {
       id: "garud-pak",
-      dwg: "GS-05",
+      dwg: "GS-04",
       title: "Garud Pak",
       subtitle: "Quick-assembly cardboard drone",
       category: "Product Design",
@@ -191,7 +189,7 @@ window.PORTFOLIO = {
     },
     {
       id: "r3bin",
-      dwg: "GS-06",
+      dwg: "GS-05",
       title: "R3BIN",
       subtitle: "Smart waste segregation, Fostride",
       category: "Product Design",

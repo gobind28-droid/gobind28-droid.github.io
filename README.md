@@ -24,13 +24,13 @@ The whole site is built from one file: `data/content.js`. To change text, add a 
 ## 2. Adding photos to a project
 
 1. Name the photos `1.jpg`, `2.jpg`, `3.jpg`, … (the first one becomes the project's cover).
-2. On GitHub, open `assets/images/`, click **Add file → Upload files**. To create a new folder, type the folder name followed by `/` in the file-name box, for example `hexapod/`, or simply drag a folder named `hexapod` from your computer.
+2. On GitHub, open `assets/images/`, click **Add file → Upload files**. To create a new folder, type the folder name followed by `/` in the file-name box, for example `biped/`, or simply drag a folder named `biped` from your computer.
 3. Open `data/content.js` → click the ✏️ pencil → find the project → add lines to its `media` list:
 
 ```js
 media: [
-  { type: "image", src: "assets/images/hexapod/1.jpg", caption: "Leg assembly in SolidWorks" },
-  { type: "image", src: "assets/images/hexapod/2.jpg", caption: "First printed leg" }
+  { type: "image", src: "assets/images/biped/1.jpg", caption: "Leg assembly in SolidWorks" },
+  { type: "image", src: "assets/images/biped/2.jpg", caption: "First printed leg" }
 ]
 ```
 
